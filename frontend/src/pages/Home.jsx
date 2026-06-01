@@ -107,7 +107,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* SECTION 2: What is Sanatan Dharma? (Britannica Content) */}
+      {/* SECTION 2: What is Sanatan Dharma? (With Image 1) */}
       <section className="py-20 bg-primary/5 border-y border-primary/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -146,30 +146,41 @@ const Home = () => {
               </div>
             </motion.div>
 
+            {/* Image 1: Spiritual/Temple Concept */}
             <motion.div 
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="flex justify-center relative"
+              className="relative"
             >
-              <div className="absolute inset-0 bg-primary/10 rounded-full blur-3xl transform scale-110"></div>
-              <div className="relative w-80 h-80 bg-white rounded-full shadow-2xl flex items-center justify-center border-8 border-white z-10">
-                <Flower className="w-32 h-32 text-primary" strokeWidth={1.2} />
+              <img 
+                src="https://images.unsplash.com/photo-1588694833215-9c98ba8040bc?q=80&w=800&auto=format&fit=crop" 
+                alt="Temple Architecture" 
+                className="rounded-3xl shadow-2xl object-cover w-full h-[450px] border-8 border-white"
+              />
+              <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-full shadow-lg">
+                <Flower className="text-primary w-10 h-10"/>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 3: The Essence & Pillars (Dharmik Vibes Content) */}
+      {/* SECTION 3: The Essence & Pillars (With Image 2) */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
+              {/* Image 2: Meditation/Peace Concept */}
+              <img 
+                src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop" 
+                alt="Meditation and Peace" 
+                className="rounded-3xl shadow-lg w-full h-64 object-cover mb-8"
+              />
               <h2 className="text-3xl md:text-4xl font-bold text-textMain mb-6">
                 {lang === 'en' ? 'The Essence & Philosophy' : 'सार र दर्शन'}
               </h2>
@@ -192,7 +203,7 @@ const Home = () => {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:mt-12"
             >
               {pillars.map((pillar, idx) => (
                 <div key={idx} className="bg-borderSoft/30 p-6 rounded-2xl shadow-sm border-t-4 border-primary/70">
@@ -207,7 +218,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* SECTION 4: Cosmic Realities Section (Karma, Samsara, Moksha) */}
+      {/* SECTION 4: Cosmic Realities Section */}
       <section className="py-20 bg-secondary/10 border-y border-borderSoft">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
@@ -245,47 +256,73 @@ const Home = () => {
         </div>
       </section>
 
-      {/* SECTION 5: Vision & Mission Section */}
-      <section className="py-20 bg-textMain relative overflow-hidden">
+      {/* SECTION 5: Vision & Mission Section (Now in White Section with Image 3) */}
+      <section className="py-20 bg-white relative overflow-hidden">
+        
+        {/* Subtle background motif behind text */}
         <div className="absolute top-0 right-0 opacity-5 pointer-events-none">
            <img src="/assets/om-mandala.svg" alt="mandala pattern" className="w-[500px] h-[500px]" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid md:grid-cols-2 gap-12">
+          
+          <div className="text-center mb-12">
+             <h2 className="text-3xl font-bold text-textMain mb-4">
+              {lang === 'en' ? 'Our Institutional Goals' : 'हाम्रो संस्थागत लक्ष्यहरू'}
+            </h2>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-12 items-center">
             
+            {/* Image 3: Himalayan/Nepal Context */}
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur-sm p-10 rounded-3xl border-t-4 border-primary"
+              className="lg:col-span-1 hidden lg:block"
             >
-              <h3 className="text-2xl font-bold text-primary mb-4 flex items-center gap-3">
-                <Globe /> {lang === 'en' ? 'Our Vision' : 'हाम्रो दृष्टिकोण'}
-              </h3>
-              <p className="text-gray-200 leading-relaxed text-lg">
-                {lang === 'en' 
-                  ? "To become a globally respected institution dedicated to the scientific understanding, preservation, and promotion of eternal wisdom systems rooted in the Vedas, Puranas, Upanishads, Geeta, and Tripiṭaka." 
-                  : "वेद, पुराण, उपनिषद्, गीता, त्रिपिटक लगायत सनातन शास्त्रहरूको ज्ञान, संरक्षण र प्रचारप्रसार गर्ने विश्वस्तरीय संस्था बन्नु।"}
-              </p>
+              <img 
+                src="https://images.unsplash.com/photo-1605367175591-53609804e768?q=80&w=800&auto=format&fit=crop" 
+                alt="Himalayan Spirituality" 
+                className="rounded-3xl shadow-xl w-full h-[400px] object-cover"
+              />
             </motion.div>
 
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="bg-white/10 backdrop-blur-sm p-10 rounded-3xl border-t-4 border-primary"
-            >
-              <h3 className="text-2xl font-bold text-primary mb-4 flex items-center gap-3">
-                <Landmark /> {lang === 'en' ? 'Our Mission' : 'हाम्रो लक्ष्य'}
-              </h3>
-              <p className="text-gray-200 leading-relaxed text-lg">
-                {lang === 'en' 
-                  ? "To research, teach, translate, and apply spiritual-scientific knowledge through education, service, communication, and robust institutional development." 
-                  : "शिक्षा, समाजसेवा, सञ्चार तथा संस्था विकासमार्फत सनातन ज्ञानको अनुसन्धान, शिक्षा, अनुवाद तथा प्रयोग गर्नु।"}
-              </p>
-            </motion.div>
+            {/* Vision & Mission Cards */}
+            <div className="lg:col-span-2 grid md:grid-cols-2 gap-8">
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="bg-white p-10 rounded-3xl shadow-lg border border-borderSoft hover:shadow-xl transition"
+              >
+                <h3 className="text-2xl font-bold text-primary mb-4 flex items-center gap-3">
+                  <Globe /> {lang === 'en' ? 'Our Vision' : 'हाम्रो दृष्टिकोण'}
+                </h3>
+                <p className="text-gray-700 leading-relaxed text-lg">
+                  {lang === 'en' 
+                    ? "To become a globally respected institution dedicated to the scientific understanding, preservation, and promotion of eternal wisdom systems rooted in the Vedas, Puranas, Upanishads, Geeta, and Tripiṭaka." 
+                    : "वेद, पुराण, उपनिषद्, गीता, त्रिपिटक लगायत सनातन शास्त्रहरूको ज्ञान, संरक्षण र प्रचारप्रसार गर्ने विश्वस्तरीय संस्था बन्नु।"}
+                </p>
+              </motion.div>
+
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="bg-white p-10 rounded-3xl shadow-lg border border-borderSoft hover:shadow-xl transition"
+              >
+                <h3 className="text-2xl font-bold text-primary mb-4 flex items-center gap-3">
+                  <Landmark /> {lang === 'en' ? 'Our Mission' : 'हाम्रो लक्ष्य'}
+                </h3>
+                <p className="text-gray-700 leading-relaxed text-lg">
+                  {lang === 'en' 
+                    ? "To research, teach, translate, and apply spiritual-scientific knowledge through education, service, communication, and robust institutional development." 
+                    : "शिक्षा, समाजसेवा, सञ्चार तथा संस्था विकासमार्फत सनातन ज्ञानको अनुसन्धान, शिक्षा, अनुवाद तथा प्रयोग गर्नु।"}
+                </p>
+              </motion.div>
+            </div>
 
           </div>
         </div>
