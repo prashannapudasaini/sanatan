@@ -9,12 +9,14 @@ const Navbar = () => {
 
   const toggleLang = () => setLang(lang === 'en' ? 'np' : 'en');
 
+  // Updated to include the new Membership route
   const navLinks = {
     en: [
       { name: 'Home', path: '/' },
       { name: 'About', path: '/about' },
       { name: 'Programs', path: '/programs' },
       { name: 'Library', path: '/library' },
+      { name: 'Membership', path: '/membership' }, // <-- Added Here
       { name: 'Contact', path: '/contact' },
     ],
     np: [
@@ -22,6 +24,7 @@ const Navbar = () => {
       { name: 'हाम्रो बारेमा', path: '/about' },
       { name: 'कार्यक्रमहरू', path: '/programs' },
       { name: 'पुस्तकालय', path: '/library' },
+      { name: 'सदस्यता', path: '/membership' }, // <-- Added Here
       { name: 'सम्पर्क', path: '/contact' },
     ]
   };
@@ -77,9 +80,14 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
+            {/* Mobile Language Toggle */}
             <button onClick={toggleLang} className="w-full text-left px-3 py-2 flex items-center gap-2 text-textMain">
               <Globe size={18} /> {lang === 'en' ? 'Switch to Nepali' : 'अंग्रेजीमा बदल्नुहोस्'}
             </button>
+            {/* Mobile Donate Button */}
+            <Link to="/donate" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-primary font-bold hover:bg-secondary rounded-md">
+               {lang === 'en' ? 'Donate' : 'सहयोग गर्नुहोस्'}
+            </Link>
           </div>
         </div>
       )}

@@ -16,6 +16,11 @@ export default {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         sanskrit: ['Samarkan', 'serif'],    // For Sanskrit accents
+      },
+      keyframes: {
+        shimmer: {
+          '100%': { transform: 'translateX(100%)' },
+        }
       }
     },
   },

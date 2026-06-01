@@ -4,7 +4,7 @@ import { LangContext } from '../App';
 import Hero from '../components/Hero';
 import { 
   BookOpen, Users, Landmark, Globe, Flower, Sun, Heart, 
-  Layers, Scale, Infinity as InfinityIcon, Compass 
+  Layers, Scale, Infinity as InfinityIcon, Compass, Target 
 } from 'lucide-react';
 
 const Home = () => {
@@ -107,7 +107,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* SECTION 2: What is Sanatan Dharma? (With Image 1) */}
+      {/* SECTION 2: What is Sanatan Dharma? */}
       <section className="py-20 bg-primary/5 border-y border-primary/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -146,7 +146,6 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Image 1: Spiritual/Temple Concept */}
             <motion.div 
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -166,7 +165,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* SECTION 3: The Essence & Pillars (With Image 2) */}
+      {/* SECTION 3: The Essence & Pillars */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -175,7 +174,6 @@ const Home = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              {/* Image 2: Meditation/Peace Concept */}
               <img 
                 src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop" 
                 alt="Meditation and Peace" 
@@ -256,7 +254,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* SECTION 5: Vision & Mission Section (Now in White Section with Image 3) */}
+      {/* SECTION 5: Vision, Mission & Approach Section */}
       <section className="py-20 bg-white relative overflow-hidden">
         
         {/* Subtle background motif behind text */}
@@ -272,57 +270,61 @@ const Home = () => {
             </h2>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-12 items-center">
+          {/* 3 Text Cards Layout */}
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 items-stretch">
             
-            {/* Image 3: Himalayan/Nepal Context */}
+            {/* 1. Vision Card */}
             <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="lg:col-span-1 hidden lg:block"
+              className="bg-white p-10 rounded-3xl shadow-lg border border-borderSoft hover:shadow-xl transition flex flex-col justify-center"
             >
-              <img 
-                src="https://images.unsplash.com/photo-1605367175591-53609804e768?q=80&w=800&auto=format&fit=crop" 
-                alt="Himalayan Spirituality" 
-                className="rounded-3xl shadow-xl w-full h-[400px] object-cover"
-              />
+              <h3 className="text-2xl font-bold text-primary mb-4 flex items-center gap-3">
+                <Globe /> {lang === 'en' ? 'Our Vision' : 'हाम्रो दृष्टिकोण'}
+              </h3>
+              <p className="text-gray-700 leading-relaxed text-lg">
+                {lang === 'en' 
+                  ? "To become a globally respected institution dedicated to the scientific understanding, preservation, and promotion of eternal wisdom systems rooted in the Vedas, Puranas, Upanishads, Geeta, and Tripiṭaka." 
+                  : "वेद, पुराण, उपनिषद्, गीता, र त्रिपिटकमा आधारित सनातन ज्ञानको वैज्ञानिक अध्ययन, संरक्षण, र प्रवर्द्धन गर्न समर्पित भई एक विश्वव्यापी रूपमा सम्मानित संस्थाको रूपमा स्थापित हुने।"}
+              </p>
             </motion.div>
 
-            {/* Vision & Mission Cards */}
-            <div className="lg:col-span-2 grid md:grid-cols-2 gap-8">
-              <motion.div 
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="bg-white p-10 rounded-3xl shadow-lg border border-borderSoft hover:shadow-xl transition"
-              >
-                <h3 className="text-2xl font-bold text-primary mb-4 flex items-center gap-3">
-                  <Globe /> {lang === 'en' ? 'Our Vision' : 'हाम्रो दृष्टिकोण'}
-                </h3>
-                <p className="text-gray-700 leading-relaxed text-lg">
-                  {lang === 'en' 
-                    ? "To become a globally respected institution dedicated to the scientific understanding, preservation, and promotion of eternal wisdom systems rooted in the Vedas, Puranas, Upanishads, Geeta, and Tripiṭaka." 
-                    : "वेद, पुराण, उपनिषद्, गीता, त्रिपिटक लगायत सनातन शास्त्रहरूको ज्ञान, संरक्षण र प्रचारप्रसार गर्ने विश्वस्तरीय संस्था बन्नु।"}
-                </p>
-              </motion.div>
+            {/* 2. Mission Card */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-white p-10 rounded-3xl shadow-lg border border-borderSoft hover:shadow-xl transition flex flex-col justify-center"
+            >
+              <h3 className="text-2xl font-bold text-primary mb-4 flex items-center gap-3">
+                <Landmark /> {lang === 'en' ? 'Our Mission' : 'हाम्रो लक्ष्य'}
+              </h3>
+              <p className="text-gray-700 leading-relaxed text-lg">
+                {lang === 'en' 
+                  ? "To actively research, teach, translate, and apply profound spiritual-scientific knowledge through modern education, selfless community service, transparent communication, and robust, sustainable institutional development across the globe." 
+                  : "आधुनिक शिक्षा, निःस्वार्थ सेवा, सञ्चार, र दिगो संस्थागत विकासको माध्यमबाट गहिरो आध्यात्मिक-वैज्ञानिक ज्ञानको निरन्तर अनुसन्धान, अध्यापन, अनुवाद, र व्यावहारिक प्रयोगलाई प्रभावकारी रूपमा अगाडि बढाउने।"}
+              </p>
+            </motion.div>
 
-              <motion.div 
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="bg-white p-10 rounded-3xl shadow-lg border border-borderSoft hover:shadow-xl transition"
-              >
-                <h3 className="text-2xl font-bold text-primary mb-4 flex items-center gap-3">
-                  <Landmark /> {lang === 'en' ? 'Our Mission' : 'हाम्रो लक्ष्य'}
-                </h3>
-                <p className="text-gray-700 leading-relaxed text-lg">
-                  {lang === 'en' 
-                    ? "To research, teach, translate, and apply spiritual-scientific knowledge through education, service, communication, and robust institutional development." 
-                    : "शिक्षा, समाजसेवा, सञ्चार तथा संस्था विकासमार्फत सनातन ज्ञानको अनुसन्धान, शिक्षा, अनुवाद तथा प्रयोग गर्नु।"}
-                </p>
-              </motion.div>
-            </div>
+            {/* 3. Approach Card (Replacing the Image) */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="bg-white p-10 rounded-3xl shadow-lg border border-borderSoft hover:shadow-xl transition flex flex-col justify-center"
+            >
+              <h3 className="text-2xl font-bold text-primary mb-4 flex items-center gap-3">
+                <Target /> {lang === 'en' ? 'Our Approach' : 'हाम्रो कार्यशैली'}
+              </h3>
+              <p className="text-gray-700 leading-relaxed text-lg">
+                {lang === 'en' 
+                  ? "To seamlessly integrate timeless traditional practices with contemporary scientific methods, fostering a holistic environment that empowers individuals to achieve ultimate spiritual growth and practical well-being." 
+                  : "समसामयिक वैज्ञानिक विधिहरूसँग शाश्वत परम्परागत अभ्यासहरूलाई निर्बाध रूपमा एकीकृत गर्दै, व्यक्तिहरूलाई समग्र आध्यात्मिक विकास र व्यावहारिक कल्याण प्राप्त गर्न सशक्त बनाउने एक पूर्ण वातावरण निर्माण गर्ने।"}
+              </p>
+            </motion.div>
 
           </div>
         </div>
