@@ -153,8 +153,8 @@ const Home = () => {
               className="relative"
             >
               <img 
-                src="https://images.unsplash.com/photo-1588694833215-9c98ba8040bc?q=80&w=800&auto=format&fit=crop" 
-                alt="Temple Architecture" 
+                src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAG3doBUjOBlxCeT_j6NdK6jnkMyK_5WcaaLbCzKfU9ul8TfTk63gz4nK1XHsnZqGMuq_JROzWBA-D3sA_84KUB-4pRzHwuXf2wj32i7yB2H8Ng9HhhhnXMSFPNJKzURjvWfloaA=s1360-w1360-h1020-rw" 
+                alt="Eternal religion" 
                 className="rounded-3xl shadow-2xl object-cover w-full h-[450px] border-8 border-white"
               />
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-full shadow-lg">

@@ -43,9 +43,9 @@ const About = () => {
 
   // Placeholder for Team Members
   const team = [
-    { name: 'Dr. Hari Prasad Sharma', role: { en: 'President / Lead Researcher', np: 'अध्यक्ष / प्रमुख अनुसन्धानकर्ता' }, img: 'https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?q=80&w=400&auto=format&fit=crop' },
-    { name: 'Saraswati Acharya', role: { en: 'Secretary General', np: 'महासचिव' }, img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop' },
-    { name: 'Ramesh Koirala', role: { en: 'Head of Education Wing', np: 'शिक्षा विभाग प्रमुख' }, img: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop' },
+    { name: 'Dr. Hari Prasad Sharma', role: { en: 'President / Lead Researcher', np: 'अध्यक्ष / प्रमुख अनुसन्धानकर्ता' }, img: '' },
+    { name: 'Saraswati Acharya', role: { en: 'Secretary General', np: 'महासचिव' }, img: '' },
+    { name: 'Ramesh Koirala', role: { en: 'Head of Education Wing', np: 'शिक्षा विभाग प्रमुख' }, img: '' },
   ];
 
   return (

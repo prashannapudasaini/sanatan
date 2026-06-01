@@ -19,8 +19,8 @@ const EventsGallery = () => {
       coverImage: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop',
       gallery: [
         'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1588694833215-9c98ba8040bc?q=80&w=800&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1605367175591-53609804e768?q=80&w=800&auto=format&fit=crop',
+        'https://idose.org/wp-content/uploads/2020/09/Philosophy-min.jpg',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyemtAAoXVZJyJG4j7Lee0q8pBhH9coGiRag&s',
         'https://images.unsplash.com/photo-1518398046578-8cca57782e17?q=80&w=800&auto=format&fit=crop'
       ]
     },
@@ -29,10 +29,10 @@ const EventsGallery = () => {
       title: { en: 'Vedic Science Symposium', np: 'वैदिक विज्ञान गोष्ठी' },
       date: { en: 'January 10, 2024', np: 'पुष २६, २०८०' },
       location: { en: 'Pokhara, Nepal', np: 'पोखरा, नेपाल' },
-      coverImage: 'https://images.unsplash.com/photo-1588694833215-9c98ba8040bc?q=80&w=800&auto=format&fit=crop',
+      coverImage: 'https://eternalreligion.org/wp-content/uploads/2026/05/ChatGPT-Image-May-14-2026-08_41_14-PM.png',
       gallery: [
-        'https://images.unsplash.com/photo-1588694833215-9c98ba8040bc?q=80&w=800&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1605367175591-53609804e768?q=80&w=800&auto=format&fit=crop',
+        'https://eternalreligion.org/wp-content/uploads/2026/05/ChatGPT-Image-May-14-2026-08_41_14-PM.png',
+        'https://www.poojn.in/wp-content/uploads/2025/05/Vedic-Sanatan-Dharma-The-Eternal-Path-Meaning-Significance-and-Relevance.jpeg.jpg',
         'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop'
       ]
     },
@@ -41,13 +41,12 @@ const EventsGallery = () => {
       title: { en: 'Gurukul Heritage Restoration', np: 'गुरुकुल सम्पदा पुनर्निर्माण' },
       date: { en: 'November 5, 2023', np: 'कार्तिक १९, २०८०' },
       location: { en: 'Lumbini, Nepal', np: 'लुम्बिनी, नेपाल' },
-      coverImage: 'https://images.unsplash.com/photo-1605367175591-53609804e768?q=80&w=800&auto=format&fit=crop',
+      coverImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxu4ekgZbU37h9FIzxt90MS8qqOKeiPObqwg&s',
       gallery: [
-        'https://images.unsplash.com/photo-1605367175591-53609804e768?q=80&w=800&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1518398046578-8cca57782e17?q=80&w=800&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1588694833215-9c98ba8040bc?q=80&w=800&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1605367175591-53609804e768?q=80&w=800&auto=format&fit=crop'
+        'https://media.licdn.com/dms/image/sync/v2/D5627AQFmIZUVR-fX-g/articleshare-shrink_800/articleshare-shrink_800/0/1734364612321?e=2147483647&v=beta&t=VGrSC3gsvC4zp6fa9N22hkmB5K-0K8iKT4ALec2a18U',
+         'https://eternalreligion.org/wp-content/uploads/2026/05/ChatGPT-Image-May-14-2026-08_41_14-PM.png',
+        'https://www.poojn.in/wp-content/uploads/2025/05/Vedic-Sanatan-Dharma-The-Eternal-Path-Meaning-Significance-and-Relevance.jpeg.jpg',
+        'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop'
       ]
     }
   ];
