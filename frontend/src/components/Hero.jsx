@@ -12,7 +12,7 @@ const Hero = () => {
   const slides = [
     {
       id: 0,
-      image: 'https://images.unsplash.com/photo-1588694833215-9c98ba8040bc?q=80&w=1600&auto=format&fit=crop', // Replace with '/assets/image1.jpg'
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwt_9WkBpSeXLAkwQ0jty9T5APCDaVEZyX4w&s', // Replace with '/assets/image1.jpg'
       content: {
         en: { headline: "Preserving Eternal Wisdom", subline: "Through Science, Education & Service" },
         np: { headline: "सनातन ज्ञानको संरक्षण", subline: "विज्ञान, शिक्षा र सेवामार्फत" }
@@ -28,7 +28,7 @@ const Hero = () => {
     },
     {
       id: 2,
-      image: 'https://images.unsplash.com/photo-1605367175591-53609804e768?q=80&w=1600&auto=format&fit=crop', // Replace with '/assets/image3.jpg'
+      image: 'https://c4.wallpaperflare.com/wallpaper/506/322/439/religious-christian-christ-god-wallpaper-preview.jpg', // Replace with '/assets/image3.jpg'
       content: {
         en: { headline: "Empowering Future Generations", subline: "Bridging ancient Gurukul traditions with modern learning" },
         np: { headline: "भावी पुस्ताको सशक्तिकरण", subline: "प्राचीन परम्परा र आधुनिक शिक्षाको संगम" }
