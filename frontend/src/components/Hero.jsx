@@ -8,11 +8,11 @@ const Hero = () => {
   const { lang } = useContext(LangContext);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // --- Slide Data (3 Images and 3 Different Texts) ---
+  // --- Slide Data (5 Images and 5 Different Texts) ---
   const slides = [
     {
       id: 0,
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwt_9WkBpSeXLAkwQ0jty9T5APCDaVEZyX4w&s', // Replace with '/assets/image1.jpg'
+      image: '/hero1.png',
       content: {
         en: { headline: "Preserving Eternal Wisdom", subline: "Through Science, Education & Service" },
         np: { headline: "सनातन ज्ञानको संरक्षण", subline: "विज्ञान, शिक्षा र सेवामार्फत" }
@@ -20,18 +20,34 @@ const Hero = () => {
     },
     {
       id: 1,
-      image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1600&auto=format&fit=crop', // Replace with '/assets/image2.jpg'
+      image: '/hero2.png',
       content: {
         en: { headline: "Awakening Inner Consciousness", subline: "Guiding humanity towards spiritual and scientific truths" },
-        np: { headline: "आन्तरिक चेतनाको जागरण", subline: "मानवतालाई आध्यात्मिक वैज्ञानिक सत्यतर्फ डोर्याउँदै" }
+        np: { headline: "आन्तरिक चेतनाको जागरण", subline: "मानवतालाई आध्यात्मिक र वैज्ञानिक सत्यतर्फ डोर्याउँदै" }
       }
     },
     {
       id: 2,
-      image: 'https://c4.wallpaperflare.com/wallpaper/506/322/439/religious-christian-christ-god-wallpaper-preview.jpg', // Replace with '/assets/image3.jpg'
+      image: '/hero3.png',
       content: {
         en: { headline: "Empowering Future Generations", subline: "Bridging ancient Gurukul traditions with modern learning" },
-        np: { headline: "भावी पुस्ताको सशक्तिकरण", subline: "प्राचीन परम्परा र आधुनिक शिक्षाको संगम" }
+        np: { headline: "भावी पुस्ताको सशक्तिकरण", subline: "प्राचीन गुरुकुल परम्परा र आधुनिक शिक्षाको संगम" }
+      }
+    },
+    {
+      id: 3,
+      image: '/hero4.png',
+      content: {
+        en: { headline: "Restoring Sacred Heritage", subline: "Protecting our temples, scriptures, and cultural identity" },
+        np: { headline: "पवित्र सम्पदाको पुनर्निर्माण", subline: "हाम्रा मन्दिर, शास्त्र र सांस्कृतिक पहिचानको रक्षा" }
+      }
+    },
+    {
+      id: 4,
+      image: '/hero5.png',
+      content: {
+        en: { headline: "Dedicated Humanitarian Service", subline: "Uplifting communities through selfless dedication and Dharma" },
+        np: { headline: "समर्पित मानवीय सेवा", subline: "निःस्वार्थ समर्पण र धर्ममार्फत समुदायको उत्थान" }
       }
     }
   ];
